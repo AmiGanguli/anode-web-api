@@ -20,6 +20,6 @@ main(event, context, callback)
 		await db.call("put", params);
 		callback(null, success(params.Item));
 	} catch (e) {
-		callback(null, failure({status: false}));
+		callback(null, failure({status: e}));
 	}
 }
